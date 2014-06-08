@@ -1,0 +1,56 @@
+Package: com.danieltaylor.jl7dark
+Version: 1.0
+Section: Themes
+Maintainer: Daniel Taylor
+Depends: winterboard, com.maxkatzmann.jellylock7
+Architecture: iphoneos-arm
+Filename: debs//com.danieltaylor.jl7dark_1.0_iphoneos-arm.deb
+Size: 67058
+MD5sum: d7470e97dc7b5bc860c2efefc82f778e
+Description: Makes the JellyLock7 handler and icons black.  Apply with WinterBoard.
+name: Dark JellyLock7 Theme
+author: Daniel Taylor
+homepage: http://www.twitter.com/tanieldaylor/
+
+Package: com.danieltaylor.jl7nicolascage
+Version: 1.0
+Section: Themes
+Maintainer: Daniel Taylor
+Depends: winterboard, com.maxkatzmann.jellylock7
+Architecture: iphoneos-arm
+Filename: debs//com.danieltaylor.jl7nicolascage_1.0_iphoneos-arm.deb
+Size: 45616
+MD5sum: 72d07daf1683126734b33919f45bb7a3
+Description: A Nicolas Cage theme for the JellyLock7 handler. Apply with WinterBoard.  Image source: http://files.gamebanana.com/img/ico/sprays/516c32f08e03d.png
+name: Nicholas Cage JellyLock7 Theme
+author: Daniel Taylor
+homepage: http://www.twitter.com/tanieldaylor/
+
+Package: com.danieltaylor.jl7solid
+Version: 1.0
+Section: Themes
+Maintainer: Daniel Taylor
+Depends: winterboard, com.maxkatzmann.jellylock7
+Architecture: iphoneos-arm
+Filename: debs//com.danieltaylor.jl7solid_1.0_iphoneos-arm.deb
+Size: 37914
+MD5sum: 1d24c3cc8059bca58c53f3aeb3ba5f09
+Description: A theme based on the original JellyLock7 handler, but solid instead of a ring. Apply with WinterBoard.
+name: Solid JellyLock7 Theme
+author: Daniel Taylor
+homepage: http://www.twitter.com/tanieldaylor/
+
+Package: com.danieltaylor.squaremessages
+Version: 1.0
+Section: Themes
+Maintainer: Daniel Taylor
+Depends: winterboard
+Architecture: iphoneos-arm
+Filename: debs//com.danieltaylor.squaremessages_1.0_iphoneos-arm.deb
+Size: 4142
+MD5sum: 3e7d28d90021b1ac6246b0ff0bf7a64a
+Description: Makes the message bubbles rectangular with sharp edges. Apply with WinterBoard.
+name: Square Messages
+author: Daniel Taylor
+homepage: http://www.twitter.com/tanieldaylor/
+
