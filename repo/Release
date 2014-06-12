@@ -1,8 +1,0 @@
-Origin: Daniel Taylor’s Repo
-Label: Daniel Taylor’s official Cydia Repository.
-Suite: stable
-Version: 0.9
-Codename: danieltaylorsrepo
-Architectures: iphoneos-arm
-Components: main
-Description: Daniel Taylor’s official Cydia Repository.
