@@ -1,0 +1,18 @@
+pre {
+	font-family: "Consolas";
+	font-size: 1vw;
+}
+
+p {
+	font-family: "Consolas";
+}
+footer {
+	text-align: center;
+	font-family: "Lato-Light";
+	vertical-align: 0;
+	color:grey;
+}
+
+a {
+	color:grey;
+}
