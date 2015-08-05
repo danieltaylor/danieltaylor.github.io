@@ -1,3 +1,6 @@
+body {
+	text-align: center;
+}
 pre {
 	font-family: "Inconsolata";
 	font-size: 1vw;
@@ -7,7 +10,6 @@ p {
 	font-family: "Inconsolata";
 }
 footer {
-	text-align: center;
 	font-family: "Lato";
 	color:grey;
 	position: absolute;
@@ -19,4 +21,8 @@ footer {
 
 a {
 	color:grey;
+}
+
+#clock {
+	margin-top: 22vw;
 }
