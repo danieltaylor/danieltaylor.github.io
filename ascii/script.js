@@ -765,14 +765,12 @@ var toString = function(text) {
     	var textChars = text.split('');
     	for (var lineNo=0; lineNo<=9; lineNo++) {
     		for (var ch=0; ch<textChars.length; ch++) {
-    			if (textChars[ch]=='\\') {	
+    			if (textChars[ch]=='\\' && textChars[ch+1]=='N') {	
     				ch++;
-    				if (textChars[ch]=='N') {
-    					if (lineNo==9) {
-    						return returnText + "<br>" + this.toStringFrom(text, ch+1);
-    					}
-						ch=textChars.length;
+    				if (lineNo==9) {
+    					return returnText + "<br>" + this.toStringFrom(text, ch+1);
     				}
+					ch=textChars.length;
     			}
     			else if (chars[textChars[ch].charCodeAt()][lineNo]===null) {
     				if (lineNo==5)
