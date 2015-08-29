@@ -34,8 +34,8 @@
 | |   |___\|   |  | |           |  | |   | \\     |  | |           |  | |   | | |    |  | |   | | |    |      | |   |      | |            |  | |   | | |    |  
  \|____________|   \|___________|   \|___|  \\____|   \|___________|   \|___|  \|____|   \|___|  \|____|       \|___|       \|____________|   \|___|  \|____|  
  </p></pre><br>
-		<input type="text" id="in"><br><br>
-		<input type="button" onclick="submit()" value="Generate!"><br>   
+		<input type="text" id="in" onkeydown="if (event.keyCode == 13) document.getElementById('btn').click()"><br><br>
+		<input type="button" id="btn" onclick="submit()" value="Generate!"><br>   
 		<p>Use \n to start a new line.</p>
 	</div>
 	<footer>Created by <a href="http://danieltaylor.github.io">Daniel Taylor</a></footer>
