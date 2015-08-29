@@ -1,20 +1,21 @@
 
 var submit = function() {
-input = document.getElementById("in").value;
-document.getElementById("ascii").innerHTML=toString(input.toUpperCase());
+	input = document.getElementById("in").value;
+	document.getElementById("ascii").innerHTML=toString(input.toUpperCase());
 }
 
 var space = "  ";
 var chars = [];
 var empty = [];
-for (var i=0; i<10; i++)
-{
+for (var i=0; i<10; i++) {
     empty[i]=null;
 }
-for (var i=0; i<127; i++)
-{
+for (var i=0; i<127; i++) {
     chars[i]=empty;
 }
+
+//TODO: fix: +
+//      add: & * < > @ ^ { } ` ~
 
 		chars[' '.charCodeAt()] =  ["               ",		//32
 									"               ",
@@ -83,6 +84,17 @@ for (var i=0; i<127; i++)
 									" \\|____    ___|",
 									"      \\|__|    "];
 		
+		chars['%'.charCodeAt()] =  [" _____  ____    ",		//37
+									"|\\    \\/\\   \\   ",
+									"| \\____\\ \\___\\  ",
+									"\\ |    | /   /  ",
+									" \\|____|/   /   ",
+									"   /   /   /__  ",
+									"  /   /   /   \\ ",
+									" /   /   /\\____\\",
+									" \\  /   / |    |",
+									"  \\/___/ \\|____|"];
+
 		chars['\''.charCodeAt()] =  [" ____  ",				//39
 									"|\\ ___\\",
 									" \\|   |",
@@ -117,7 +129,7 @@ for (var i=0; i<127; i++)
 									"/\\\\|   |",
 									"\\/____/ "];
 		/*
-		chars['+'.charCodeAt()] =  ["            ",		//44
+		chars['+'.charCodeAt()] =  ["            ",			//44
 									"            ",
 									"    ____    ",
 									" __|\\___\\   ",
@@ -171,6 +183,17 @@ for (var i=0; i<127; i++)
 									"| |   |",
 									" \\|___|"];
 		
+		chars['/'.charCodeAt()] =  ["       ____  ",		//47
+									"      /\\   \\ ",
+									"     /  \\___\\",
+									"    /   /   /",
+									"   /   /   / ",
+									"  /   /   /  ",
+									" /   /   /   ",
+									"/   /   /    ",
+									"\\  /   /     ",
+									" \\/___/      "];
+
 		chars['0'.charCodeAt()] =  [" ____________  ",		//48
 									"|\\           \\ ",
 									"| \\___________\\",
@@ -336,6 +359,28 @@ for (var i=0; i<127; i++)
 									" \\|________|",
 									"            "];
 		
+		chars['?'.charCodeAt()] =  [" ____________   ",		//63
+									"|\\           \\  ",
+									"| \\___________\\ ",
+									"\\ |    ___     |",
+									" \\|___|_| |    |",
+									"    |\\___\\|    |",
+									"    ||     ____|",
+									"    \\|____|     ",
+									"    |\\____\\     ",
+									"    \\|____|     "];
+
+		chars['@'.charCodeAt()] =  [" _____________  ",		//64
+									"|\\            \\ ",
+									"| \\____________\\",
+									"| |  ________  |",
+									"| | ||\\___\\ || |",
+									"| | |||   |_|| |",
+									"| | |||   |_\\| |",
+									"| | |\\|________|",
+									"| | |_______\\   ",
+									" \\|__________|  "];
+
 		chars['A'.charCodeAt()] =  [" ____________   ",		//65
 									"|\\           \\  ",
 									"| \\___________\\ ",
@@ -670,6 +715,17 @@ for (var i=0; i<127; i++)
 									"| |   |_\\",
 									"| |     |",
 									" \\|_____|"];
+
+		chars['\\'.charCodeAt()] = [" ____         ",		//92
+									" \\   \\        ",
+									" \\\\___\\       ",
+									"  \\\\   \\      ",
+									"   \\\\   \\     ",
+									"    \\\\   \\    ",
+									"     \\\\   \\   ",
+									"      \\\\   \\  ",
+									"       \\\\   \\ ",
+									"        \\\\___\\"];
 		
 		chars[']'.charCodeAt()] =  [" ______  ",			//93
 									"|\\     \\ ",
@@ -682,6 +738,17 @@ for (var i=0; i<127; i++)
 									"| |     |",
 									" \\|_____|"];
 		
+		chars['_'.charCodeAt()] =  ["                ",		//95
+									"                ",
+									"                ",
+									"                ",
+									"                ",
+									" ____________   ",
+									"|\\           \\  ",
+									"| \\___________\\ ",
+									"| |            |",
+									" \\|____________|"];
+
 		chars['|'.charCodeAt()] =  [" ____  ",				//124
 									"|\\   \\ ",
 									"| \\___\\",
@@ -693,28 +760,21 @@ for (var i=0; i<127; i++)
 									"| |   |",
 									" \\|___|"];
 
-var toString = function(text)
-{
+var toString = function(text) {
         var returnText = "";
     	var textChars = text.split('');
-    	for (var lineNo=0; lineNo<=9; lineNo++)
-    	{
-    		for (var ch=0; ch<textChars.length; ch++)
-    		{
-    			if (textChars[ch]=='\\')
-    			{	
+    	for (var lineNo=0; lineNo<=9; lineNo++) {
+    		for (var ch=0; ch<textChars.length; ch++) {
+    			if (textChars[ch]=='\\') {	
     				ch++;
-    				if (textChars[ch]=='N')
-    				{
-    					if (lineNo==9)
-    					{
+    				if (textChars[ch]=='N') {
+    					if (lineNo==9) {
     						return returnText + "<br>" + this.toStringFrom(text, ch+1);
     					}
 						ch=textChars.length;
     				}
     			}
-    			else if (chars[textChars[ch].charCodeAt()][lineNo]===null)
-    			{
+    			else if (chars[textChars[ch].charCodeAt()][lineNo]===null) {
     				if (lineNo==5)
     				returnText += "-invalid char-" + space;
     				else returnText += "-            -"+ space;
@@ -727,11 +787,7 @@ var toString = function(text)
     	return returnText;
 }
 
-var toStringFrom = function(text, start)
-{
+var toStringFrom = function(text, start) {
     var returnText = text.substring(start);
     return toString(returnText);
 }
-
-
-
