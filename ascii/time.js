@@ -182,7 +182,7 @@
 			for (var ch=0; ch<textChars.length; ch++) {
 				returnText += chars[textChars[ch].charCodeAt()][lineNo] + space;
 			}
-				eturnText += "<br>";
+				returnText += "<br>";
 		}
 		return returnText;
 	}
