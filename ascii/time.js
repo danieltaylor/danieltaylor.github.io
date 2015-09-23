@@ -176,24 +176,36 @@
 
 	var toString = function(text)
 	{
-	        var returnText = "";
-	    	var textChars = text.split('');
-	    	for (var lineNo=0; lineNo<=9; lineNo++)
-	    	{
-	    		for (var ch=0; ch<textChars.length; ch++)
-	    		{
-	    				returnText += chars[textChars[ch].charCodeAt()][lineNo] + space;
-	    		}
-	    		returnText += "<br>";
-	    	}
-	    	return returnText;
+		var returnText = "";
+		var textChars = text.split('');
+		for (var lineNo=0; lineNo<=9; lineNo++) {
+			for (var ch=0; ch<textChars.length; ch++) {
+				returnText += chars[textChars[ch].charCodeAt()][lineNo] + space;
+			}
+				eturnText += "<br>";
+		}
+		return returnText;
 	}
 
 //GENERAL SETTINGS
-	var nightMode = false;
 	var twelveHour = true;
 	var hideAMPM = false;
 	var blink = true;
+
+	$(document).ready(function() {
+		$('#hideAMPM').click(function() {
+			hideAMPM = !hideAMPM;
+		});
+		$('#twentyfourhour').click(function() {
+			twelveHour = !twelveHour;
+		});
+		$('#nightmode').click(function() {
+		    $('body').toggleClass('dark');
+		});
+		$('#blink').click(function() {
+			blink = !blink;
+		});
+	});
 
 	var d;
 	var h;
@@ -250,12 +262,3 @@
 		document.getElementById("ascii").innerHTML=toString(h+col+m+ampm);
 	}
 	setInterval(refreshTime, 1000);
-
-/*
-	var changeHrMode = function() {
-		if (hr24)
-			hr24=false;
-		else
-			hr24=true;
-	}
-*/

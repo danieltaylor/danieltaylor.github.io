@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>ASCII Clock</title>
-	<link rel="apple-touch-icon" href="./apple-touch-icon.png">
-	<link href="./style.css" rel="stylesheet">
+	<link rel='apple-touch-icon' href='./apple-touch-icon.png'>
+	<link href='./style.css' rel='stylesheet'>
 	<link href='http://fonts.googleapis.com/css?family=Lato:100|Inconsolata' rel='stylesheet' type='text/css'>
-	<script src="./time.js"></script>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+	<script src='./time.js'></script>
 </head>
-
 <body>
-	<div id="clock">
-		<pre><p id="ascii">
+	<div id='clock'>
+		<pre><p id='ascii'>
 		</p></pre>
 	</div>
-	<footer>Created by <a href="http://danieltaylor.github.io">Daniel Taylor</a></footer>
+	<div id='options'>
+		<input type='checkbox' id='hideAMPM'>   Hide AM/PM<br>
+		<input type='checkbox' id='twentyfourhour'>   24 Hour<br>
+		<input type='checkbox' id='nightmode'>   Night Mode<br>
+		<input type='checkbox' id='blink'>   No Animation
+	</div>
+	<footer><a href="javascript:$('#options').toggle();">Options</a><br>Created by <a href='http://danieltaylor.github.io'>Daniel Taylor</a></footer>
 </body>
-
 </html>
