@@ -28,6 +28,10 @@ a:hover {
 	opacity:1.0;
 }
 
+ul {
+	list-style-type: circle;
+}
+
 #title {
 	text-decoration: underline;
 	opacity: 0.7;
