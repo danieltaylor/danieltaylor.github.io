@@ -4,12 +4,14 @@
 	<title>About</title>
 	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 	<link href="./style.css" rel="stylesheet">
+	<link href="./about/style.css" rel="stylesheet">
  	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300,400' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:700,300,100,100italic' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
 <body>
-	<h1>Daniel Taylor</h1>
+	<h1><a href="./index.html" style="all:unset; cursor:pointer">Daniel Taylor</a></h1>
 	<img style="width:300px" src=./images/danieltaylor-2.png><br><br>
 	<div style="text-align:left; padding-left: 5em; padding-right: 5em">
 		<h2 align=left>Education</h2>
@@ -20,6 +22,7 @@
 			<p id="date">2012 – 2016</p>
 			Westlake High School (HS Diploma)<br>
 		</div>
+		<br>
 
 		<h2 align=left>Work Experience</h2>
 
@@ -46,88 +49,156 @@
 				<li>Assisted students in completing class assignments in C++</li>
 			</ul><br>
 		</div>
+		<br>
 
 		<h2 align=left>Relevant Coursework</h2>
+		<a onClick="if (this.innerHTML == 'Expand All') {
+			$('.toggle-coursework').each(function() {
+				this.checked = true;
+			});
+			this.innerHTML = 'Collapse All';
+		}
+		else {
+			$('.toggle-coursework').each(function() {
+				this.checked = false;
+			});
+			this.innerHTML = 'Expand All';
+		}"
+		id=expandCollapse>Expand All</a>
 
 		<div id="about-subsection">
 			<p id="date">2021</p>
-			Introduction to Machine Learning (CS 472 - BYU)<br>
-			<ul>
+			<input id="cs472" class="toggle toggle-coursework" type="checkbox">
+			<label for="cs472" class="lbl-toggle">
+				Introduction to Machine Learning (CS 472 - BYU)
+			</label>
+			<ul class="collapsible-content">
 				<li>Used python to program and implement supervised and unsupervised learning models including perceptron, MLP, decision tree, k-nearest neighbor, k-means, and HAC models</li><br>
-				<li>Additionally learned how to use existing ML libraries such as sci-kit learn</li>
+				<li>Learned use existing ML libraries such as scikit-learn</li><br>
+			</ul>
+			<input id="cs465" class="toggle toggle-coursework" type="checkbox">
+			<label for="cs465" class="lbl-toggle">
+				Computer Security (CS 465 - BYU)
+			</label>
+			<ul class="collapsible-content">
+				<li>Implemented Diffie-Hellman key exchange and encryption algorithms including AES and RSA</li><br>
+				<li>Executed buffer overflow, MAC extension, and pre-image/collision hash attacks</li><br>
+			</ul>
+			<input id="cs345" class="toggle toggle-coursework" type="checkbox">
+			<label for="cs345" class="lbl-toggle">
+				Operating Systems (CS 345 - BYU)
+			</label>
+			<ul class="collapsible-content">
+				<li>Developed significant portions of an operating system in C, including a shell, multitasking, virtual memory management, task scheduling, and file management</li><br>
 			</ul><br>
 
 			<p id="date">2020</p>
-			Software Design (CS 340 - BYU)<br>
-			<ul>
+			<input id="cs340" class="toggle toggle-coursework" type="checkbox">
+			<label for="cs340" class="lbl-toggle">
+				Software Design (CS 340 - BYU)
+			</label>
+			<ul class="collapsible-content">
 				<li>Built a Twitter clone for Android</li><br>
 				<li>Implemented back end using AWS Lambda, API Gateway, DynamoDB, and SQS</li>
 			</ul>
-			Systems Programming (CS 324 - BYU)<br>
-			<ul>
+			<input id="cs324" class="toggle toggle-coursework" type="checkbox">
+			<label for="cs324" class="lbl-toggle">
+				Systems Programming (CS 324 - BYU)</label>
+			<ul class="collapsible-content">
 				<li>Learned to use system calls in C to deal with signals, form network connections, and implement concurrent processing</li><br>
 				<li>Created an HTTP proxy server</li>
 			</ul>
-			Algorithm Design & Analysis (CS 312 - BYU)<br>
-			<ul>
+			<input id="cs312" class="toggle toggle-coursework" type="checkbox">
+			<label for="cs312" class="lbl-toggle">
+				Algorithm Design & Analysis (CS 312 - BYU)
+			</label>
+			<ul class="collapsible-content">
 				<li>Studied and designed algorithms using graph theory, dynamic programming, divide-and-conquer, and branch-and-bound methods</li><br>
 				<li>Implemented algorithms in Python</li>
 			</ul>
-			Computational Theory (CS 252 - BYU)<br>
-			<ul>
+			<input id="cs252" class="toggle toggle-coursework" type="checkbox">
+			<label for="cs252" class="lbl-toggle">
+				Computational Theory (CS 252 - BYU)
+			</label>
+			<ul class="collapsible-content">
 				<li>Studied and designed various computational models, including finite state automata, push down automata, and Turing machines</li>
 			</ul>
-			Advanced Programming Concepts (CS 240 - BYU)<br>
-			<ul>
+			<input id="cs240" class="toggle toggle-coursework" type="checkbox">
+			<label for="cs240" class="lbl-toggle">
+				Advanced Programming Concepts (CS 240 - BYU)
+			</label>
+			<ul class="collapsible-content">
 				<li>Developed a web server and API</li><br>
 				<li>Created a client app for Android</li><br>
 				<li>Created an SQLite database</li>
 			</ul></br>
 
 			<p id="date">2019</p>
-			Discrete Structures (CS 236 - BYU)<br>
-			<ul>
+			<input id="cs236" class="toggle toggle-coursework" type="checkbox">
+			<label for="cs236" class="lbl-toggle">
+				Discrete Structures (CS 236 - BYU)
+			</label>
+			<ul class="collapsible-content">
 				<li>Wrote programs in C++ to parse, lex, and interpret Datalog statements</li><br>
 				<li>Designed finite state automata to interpret regular languages</li>
 			</ul>
-			Computer Systems (CS 224 - BYU)<br>
-			<ul>
+			<input id="cs224" class="toggle toggle-coursework" type="checkbox">
+			<label for="cs224" class="lbl-toggle">
+				Computer Systems (CS 224 - BYU)
+			</label>
+			<ul class="collapsible-content">
 				<li>Programmed in C</li><br>
 				<li>Studied data types and processing</li><br>
 				<li>Worked with Assembly code</li>
 			</ul></br>
 
 			<p id="date">2017</p>
-			Scientific Computing (IT 515R - BYU)<br>
-			<ul>
+			<input id="it515r" class="toggle toggle-coursework" type="checkbox">
+			<label for="it515r" class="lbl-toggle">
+				Scientific Computing (IT 515R - BYU)
+			</label>
+			<ul class="collapsible-content">
 				<li>Wrote programs in C++ for use on the Fulton Supercomputer</li><br>
 				<li>Learned to use various development tools including Git, Slurm, and CMake</li><br>
 				<li>Learned to implement optimizations including compiler settings and multi-threading</li>
 			</ul>
-			Data Structures (CS 235 - BYU)<br>
-			<ul>
+			<input id="cs235" class="toggle toggle-coursework" type="checkbox">
+			<label for="cs235" class="lbl-toggle">
+				Data Structures (CS 235 - BYU)
+			</label>
+			<ul class="collapsible-content">
 				<li>Learned to implement various data structures in C++, such as stacks, queues, deques, and linked lists</li>
 			</ul><br>
 
 			<p id="date">2016</p>
-			Intro to Computer Programming (CS 142 - BYU)<br>
-			<ul>
+			<input id="cs142" class="toggle toggle-coursework" type="checkbox">
+			<label for="cs142" class="lbl-toggle">
+				Intro to Computer Programming (CS 142 - BYU)
+			</label>
+			<ul class="collapsible-content">
 				<li>Learned the basics of C++, including the implementation of classes and methods using header files</li>
 			</ul><br>
 
 			<p id="date">2015 – 2016</p>
-			Computer Science Independent Projects Honors (Senior Year - HS)<br>
-			<ul>
+			<input id="csiph" class="toggle toggle-coursework" type="checkbox">
+			<label for="csiph" class="lbl-toggle">
+				Computer Science Independent Projects Honors (Senior Year - HS)
+			</label>
+			<ul class="collapsible-content">
 				<li>Worked independently, studying various languages including JavaScript, Python, HTML, and CSS</li><br>
 				<li>Assisted AP CS students with their Java programming assignments</li>
 			</ul><br>
 
 			<p id="date">2014 – 2015</p>
-			AP Computer Science (Junior Year - HS)<br>
-			<ul>
+			<input id="apcs" class="toggle toggle-coursework" type="checkbox">
+			<label for="apcs" class="lbl-toggle">
+				AP Computer Science (Junior Year - HS)
+			</label>
+			<ul class="collapsible-content">
 				<li>Learned Java and wrote programs in preparation for the AP test</li>
 			</ul><br>
 		</div>
+		<br>
 
 		<h2 align=left>Other Interests</h2>
 		<div id="about-subsection">

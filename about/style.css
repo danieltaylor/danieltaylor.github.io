@@ -1,0 +1,52 @@
+#about-subsection {
+	margin-left: .2em;
+	padding-left: 1em;
+	border-left-style:solid;
+	border-left-width: 1px;
+	border-left-color:white
+}
+
+.language-icon {
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 15px;
+	-webkit-filter: invert(1);
+	filter: invert(100%);
+}
+
+input[type='checkbox'] {
+	display: none;
+}
+
+.lbl-toggle::after {
+	content: '⌃';
+	display: inline-block;
+	transform: rotate(90deg) translateX(3px);
+	opacity: 0.4;
+	font-size: 15pt;
+	transition: transform .2s ease-out;
+}
+
+.lbl-toggle:hover::after {
+	opacity: 1.0;
+}
+
+.toggle:checked + .lbl-toggle::after {
+	transform: rotate(180deg) translateX(-4px) translateY(2px);
+}
+
+.collapsible-content {
+	max-height: 0px;
+	margin: 10px;
+	overflow: hidden;
+	transition: max-height .3s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+	max-height: 100vh;
+}
+
+.toggle:checked + .lbl-toggle {
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}

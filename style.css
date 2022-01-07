@@ -64,11 +64,3 @@ ul {
 #date {
 	opacity: 0.7;
 }
-
-#about-subsection {
-	margin-left: .2em;
-	padding-left: 1em;
-	border-left-style:solid;
-	border-left-width: 1px;
-	border-left-color:white
-}
