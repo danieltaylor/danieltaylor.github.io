@@ -7,7 +7,9 @@
 	<link href="./about/style.css" rel="stylesheet">
  	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300,400' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:700,300,100,100italic' rel='stylesheet' type='text/css'>
+	<script src="https://kit.fontawesome.com/829e1fad62.js" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -16,25 +18,25 @@
 	<div style="text-align:left; padding-left: 5em; padding-right: 5em">
 		<h2 align=left>Education</h2>
 
-		<div id="about-subsection">
-			<p id="date">2016 – 2017, 2019 – Present</p>
+		<div class="about-subsection">
+			<p class="date">2016 – 2017, 2019 – Present</p>
 			Brigham Young University (BS, Computer Science)<br><br>
-			<p id="date">2012 – 2016</p>
+			<p class="date">2012 – 2016</p>
 			Westlake High School (HS Diploma)<br>
 		</div>
 		<br>
 
 		<h2 align=left>Work Experience</h2>
 
-		<div id="about-subsection">
-			<p id="date">2020 – Present</p>
+		<div class="about-subsection">
+			<p class="date">2020 – Present</p>
 			Computer Programmer (BYU Office of Information Technology)<br>
 			<ul>
 				<li>Helped maintain and update university’s Central Authentication Service, a login platform used daily by 30,000+ students and faculty</li><br>
 				<li>Used software and web development tools including AWS, Terraform, and Selenium</li>
 			</ul><br>
 
-			<p id="date">2015, 2016, 2019</p>
+			<p class="date">2015, 2016, 2019</p>
 			Office Clerk, IT Assistant (Horvitz & Levy, LLP)<br>
 			<ul>
 				<li>Imaged, updated, and installed new HDDs to 50+ actively used workstations</li><br>
@@ -42,7 +44,7 @@
 				<li>Digitized and organized 100+ page legal briefs for archival purposes</li>
 			</ul><br>
 
-			<p id="date">2016</p>
+			<p class="date">2016</p>
 			Computer Science Tutor (Self-employed)<br>
 			<ul>
 				<li>Taught programming concepts to first time programmers</li><br>
@@ -64,10 +66,10 @@
 			});
 			this.innerHTML = 'Expand All';
 		}"
-		id=expandCollapse>Expand All</a>
+		id="expandCollapse">Expand All</a>
 
-		<div id="about-subsection">
-			<p id="date">2021</p>
+		<div class="about-subsection">
+			<p class="date">2021</p>
 			<input id="cs472" class="toggle toggle-coursework" type="checkbox">
 			<label for="cs472" class="lbl-toggle">
 				Introduction to Machine Learning (CS 472 - BYU)
@@ -92,7 +94,7 @@
 				<li>Developed significant portions of an operating system in C, including a shell, multitasking, virtual memory management, task scheduling, and file management</li><br>
 			</ul><br>
 
-			<p id="date">2020</p>
+			<p class="date">2020</p>
 			<input id="cs340" class="toggle toggle-coursework" type="checkbox">
 			<label for="cs340" class="lbl-toggle">
 				Software Design (CS 340 - BYU)
@@ -133,7 +135,7 @@
 				<li>Created an SQLite database</li>
 			</ul></br>
 
-			<p id="date">2019</p>
+			<p class="date">2019</p>
 			<input id="cs236" class="toggle toggle-coursework" type="checkbox">
 			<label for="cs236" class="lbl-toggle">
 				Discrete Structures (CS 236 - BYU)
@@ -152,7 +154,7 @@
 				<li>Worked with Assembly code</li>
 			</ul></br>
 
-			<p id="date">2017</p>
+			<p class="date">2017</p>
 			<input id="it515r" class="toggle toggle-coursework" type="checkbox">
 			<label for="it515r" class="lbl-toggle">
 				Scientific Computing (IT 515R - BYU)
@@ -170,7 +172,7 @@
 				<li>Learned to implement various data structures in C++, such as stacks, queues, deques, and linked lists</li>
 			</ul><br>
 
-			<p id="date">2016</p>
+			<p class="date">2016</p>
 			<input id="cs142" class="toggle toggle-coursework" type="checkbox">
 			<label for="cs142" class="lbl-toggle">
 				Intro to Computer Programming (CS 142 - BYU)
@@ -179,7 +181,7 @@
 				<li>Learned the basics of C++, including the implementation of classes and methods using header files</li>
 			</ul><br>
 
-			<p id="date">2015 – 2016</p>
+			<p class="date">2015 – 2016</p>
 			<input id="csiph" class="toggle toggle-coursework" type="checkbox">
 			<label for="csiph" class="lbl-toggle">
 				Computer Science Independent Projects Honors (Senior Year - HS)
@@ -189,7 +191,7 @@
 				<li>Assisted AP CS students with their Java programming assignments</li>
 			</ul><br>
 
-			<p id="date">2014 – 2015</p>
+			<p class="date">2014 – 2015</p>
 			<input id="apcs" class="toggle toggle-coursework" type="checkbox">
 			<label for="apcs" class="lbl-toggle">
 				AP Computer Science (Junior Year - HS)
@@ -201,7 +203,7 @@
 		<br>
 
 		<h2 align=left>Other Interests</h2>
-		<div id="about-subsection">
+		<div class="about-subsection">
 			<ul>
 				<li>Editing</li><br>
 				<li>Photography</li><br>
