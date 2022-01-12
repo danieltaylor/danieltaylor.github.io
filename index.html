@@ -7,9 +7,32 @@
  	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300,400' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:700,300,100,100italic' rel='stylesheet' type='text/css'>
 	<script src="https://kit.fontawesome.com/829e1fad62.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src='./script.js'></script>
+	<script>
+		$(document).ready(function () {
+			loadTheme();
+		});
+	</script>
 </head>
 
 <body>
+	<div id="header"
+	<div align="right" style="padding-right:1em; padding-top:1em; font-size:12px;">
+		<a id="toggle-lights" onclick="
+			$(this).toggleClass('fa-toggle-off fa-toggle-on');
+			if ($(this).hasClass('fa-toggle-on')) {
+				document.documentElement.setAttribute('data-theme', 'light');
+				localStorage.setItem('theme', 'light');
+			}
+			else {
+				document.documentElement.setAttribute('data-theme', 'default');
+				localStorage.setItem('theme', 'default');
+			}
+			"
+			class="fas fa-toggle-off" style="font-size:20px; vertical-align:middle;"></a>
+	</div>
+	</div>
 	<h1>Daniel Taylor</h1>
 	<img style="width:300px" src=./images/danieltaylor-2.png><br><br>
 	<a href="http://linkedin.com/in/danielpearsontaylor" class="icon" alt-text="LinkedIn"><i class="fab fa-linkedin"></i></a>

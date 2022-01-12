@@ -1,11 +1,21 @@
+:root {
+	--bg-color: rgb(30,30,50);
+	--accent-color: white;
+}
+
+[data-theme="light"] {
+	--bg-color: white;
+	--accent-color: unset;
+}
+
 h1 {
-	font-family:"Josefin Slab";
+	font-family: "Josefin Slab";
 	font-weight:300;
 	font-size: 50px;
 }
 
 h2 {
-	font-family:"Josefin Slab";
+	font-family: "Josefin Slab";
 	font-weight:300;
 	font-size: 30px;
 }
@@ -14,12 +24,12 @@ body {
 	font-family: "Roboto";
 	font-weight: 300;
 	text-align: center;
-	background-color: rgb(30,30,50);
-	color: white;
+	background-color: var(--bg-color);
+	color: var(--accent-color);
 }
 
 a {
-	color: white;
+	color: var(--accent-color);
 	text-decoration: none;
 	opacity: 0.7;
 }
@@ -38,7 +48,7 @@ ul {
 }
 
 .project {
-	color: white;
+	color: var(--accent-color);
 	text-decoration: none;
 	opacity: 0.4;
 }
