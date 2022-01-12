@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project Writeups</title>
+	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+	<link href="./style.css" rel="stylesheet">
+	<link href="./about/style.css" rel="stylesheet">
+ 	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:700,300,100,100italic' rel='stylesheet' type='text/css'>
+	<script src="https://kit.fontawesome.com/829e1fad62.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src='./script.js'></script>
+	<script>
+		$(document).ready(function () {
+			loadTheme();
+		});
+	</script>
+
+	<meta name="robots" content="noindex">
+</head>
+
+<body>
+	<div style="padding-right:1em; padding-top:1em; font-size:12px; float:right">
+		<a id="toggle-lights" onclick="
+			$(this).toggleClass('fa-toggle-off fa-toggle-on');
+			if ($(this).hasClass('fa-toggle-on')) {
+				document.documentElement.setAttribute('data-theme', 'light');
+				localStorage.setItem('theme', 'light');
+			}
+			else {
+				document.documentElement.setAttribute('data-theme', 'default');
+				localStorage.setItem('theme', 'default');
+			}
+			"
+			class="fas fa-toggle-off" style="font-size:20px; vertical-align:middle;"></a>
+	</div>
+	<div align="left">
+		<h2 style="margin-left:20px; display: inline-block; text-align:left"><a href="./index.html" style="all:unset; cursor:pointer">Daniel Taylor</a></h2>
+	</div>
+	<h1  style="font-family:'Josefin Sans'">Project Writeups</h1>
+	<div style="text-align:left; padding-left: 5em; padding-right: 5em">I believe the best examples of my attention to detail, experience in programming, and love of the work are best illustrated by my project writeups.  A few of these writeups can be found below.
+	<br>
+	<br>
+	<div style="opacity:0.4;">
+	Notice:  The following files contain code and work associated with both university coursework and online competetive coding challenges.  By downloading the files you agree that you will not redistribute the files or their contents.  Failure to do so is a violation of copyright and may constitute as cheating in educational and competitive settings.
+	</div>
+	</div><br><br>
+
+	<div style="text-align:left; padding-left: 5em; padding-right: 5em">
+		<h2 align=left>CS 312 - Algorithm Design and Analysis</h2>
+		<div style="display:flex; text-align:justify">
+			<a class="fas fa-file" style="font-size:80px; margin-right:14px" href="https://app.box.com/s/ywjrgziwabemursxcyzwlv5bb64bh3sn"></a>
+			<div class="about-subsection" style="display:flex; align-items: center; text-align:justify">
+				<div>
+					In 2020, I took a class on algorithms at BYU.  For the class, we were required to study algorithms, implement them in Python, and then analyze the time complexity of our implementations.  Since many of the algorithms involved a lot of mathematical notation, I taught myself LaTex and used it to typeset my writeups.  As a result, I am proud not only of the content of these writeups, but also of their appearence.
+				</div>
+			</div>
+		</div>
+		<br>
+
+		<h2 align=left>RingZer0 CTF Challenges</h2>
+		<div style="display:flex; text-align:justify">
+			<a class="fas fa-file" style="font-size:80px; margin-right:14px" href="https://app.box.com/s/lqr04bn02abp2m8tgcnqyqmojl6mgqqc"></a>
+			<div class="about-subsection" style="display:flex; align-items: center; text-align:justify">
+				<div>
+					<a href="https://ringzer0ctf.com">RingZer0 CTF</a> is a site that offers a wide range of security related challenges in topics including encryption, digital forensics, and networking.  In my computer security course, we were offered extra credit for each capture the flag challenge that we completed and submitted a write up for.  Linked are my writeups for the 13 challenges I completed for extra credit.  I have completed a few more since, and hope to continue doing writeups and solving more challenges as I continue to develop new skills.
+				</div>
+			</div>
+		</div>
+		<br>
+
+		<h2 align=left>AWS Server Migration</h2>
+		<div style="display:flex; text-align:justify">
+		<a class="fas fa-file" style="font-size:80px; margin-right:14px" href="https://app.box.com/s/v0l9ssgrzmsur5xf856jey5ukngte4a9"></a>
+		<div class="about-subsection" style="display:flex; align-items: center; text-align:justify">
+			Although perhaps the least exciting of my writeups found on this page, I have found the documentation of processes used for my work at BYU OIT to be the most useful.  While rerouting SSO traffic from old server (Elastic Beanstalk) to new (ECS/Fargate), we wanted to have as few dropped user sessions as possible.  Having both servers running allowed us to avoid downtime by simply switch over the DNS to point to the new server, and copying ticket granting tickets (TGTs) from the old server's Redis store to that of the new one allowed active sessions to remain valid.  The linked document describes the process required to migrate data between the two Redis stores.
+		</div>
+
+	</div>
+</body>
+</html>
