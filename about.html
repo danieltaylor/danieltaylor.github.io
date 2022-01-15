@@ -18,20 +18,22 @@
 </head>
 
 <body>
-	<div align="right" style="padding-right:1em; padding-top:1em; font-size:12px;">
+	<div id="lightswitch" align="right">
+		Turn <span id="onoff">on</span> the lights:&nbsp;
 		<a id="toggle-lights" onclick="
 			$(this).toggleClass('fa-toggle-off fa-toggle-on');
 			if ($(this).hasClass('fa-toggle-on')) {
 				document.documentElement.setAttribute('data-theme', 'light');
 				localStorage.setItem('theme', 'light');
+				$('#onoff').text('off');
 			}
 			else {
 				document.documentElement.setAttribute('data-theme', 'default');
 				localStorage.setItem('theme', 'default');
+				$('#onoff').text('on');
 			}
 			"
 			class="fas fa-toggle-off" style="font-size:20px; vertical-align:middle;"></a>
-	</div>
 	</div>
 	<h1><a href="./index.html" style="all:unset; cursor:pointer">Daniel Taylor</a></h1>
 	<img style="width:300px" src=./images/danieltaylor-2.png><br><br>

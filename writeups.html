@@ -21,16 +21,19 @@
 </head>
 
 <body>
-	<div style="padding-right:1em; padding-top:1em; font-size:12px; float:right">
+	<div id='lightswitch' style="float:right">
+		Turn <span id="onoff">on</span> the lights:&nbsp;
 		<a id="toggle-lights" onclick="
 			$(this).toggleClass('fa-toggle-off fa-toggle-on');
 			if ($(this).hasClass('fa-toggle-on')) {
 				document.documentElement.setAttribute('data-theme', 'light');
 				localStorage.setItem('theme', 'light');
+				$('#onoff').text('off');
 			}
 			else {
 				document.documentElement.setAttribute('data-theme', 'default');
 				localStorage.setItem('theme', 'default');
+				$('#onoff').text('on');
 			}
 			"
 			class="fas fa-toggle-off" style="font-size:20px; vertical-align:middle;"></a>
