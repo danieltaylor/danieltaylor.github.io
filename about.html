@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8"/>
+
 	<title>About</title>
 	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 	<link href="./style.css" rel="stylesheet">
 	<link href="./about/style.css" rel="stylesheet">
 	<script src="./script.js"></script>
+	<script src="./about/script.js"></script>
  	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300,400' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:700,300,100,100italic' rel='stylesheet' type='text/css'>
 	<script src="https://kit.fontawesome.com/829e1fad62.js" crossorigin="anonymous"></script>
@@ -13,6 +16,7 @@
 	<script>
 		$(document).ready(function () {
 			loadTheme();
+			enableExpandOnClick();
 		});
 	</script>
 </head>
@@ -37,8 +41,9 @@
 	</div>
 	<h1><a href="./index.html" style="all:unset; cursor:pointer">Daniel Taylor</a></h1>
 	<img style="width:300px" src=./images/danieltaylor-2.png><br><br>
+	Jump to: <a href="#education">Education</a>, <a href="#languages">Languages</a>, <a href="#work">Work</a>, <a href="#coursework">Coursework</a>, <a href="#interests">Interests</a><br><br>
 	<div style="text-align:left; padding-left: 5em; padding-right: 5em">
-		<h2 align=left>Education</h2>
+		<h2 id="education">Education</h2>
 
 		<div class="about-subsection">
 			<p class="date">2016 – 2017, 2019 – Present</p>
@@ -48,10 +53,63 @@
 		</div>
 		<br>
 
-		<h2 align=left>Work Experience</h2>
+		<h2 id="languages">Language Experience</h2>
 
 		<div class="about-subsection">
-			<p class="date">2020 – Present</p>
+			Hover mouse over abbreviations for full name, or click to jump to description (if available).<br>
+			<ul>
+			<li>Spanish (since 2012):
+				<a title="Louisiana Baton Rouge Misson (2017–2019, volunteer work)">LBRM</a>,
+				<a title="AP Spanish (2014–2015, WHS)">AP SP</a>,
+				<a title="Spanish 3 (2013–2014, WHS)">SP3</a>,
+				<a title="Spanish 2 (2012–2013, WHS)">SP2</a>,
+				<a title="Spanish 1 (2011–2012, CMS)">SP1</a>
+			</li><br>
+			<li>Java (since 2014):
+				<a href="#byuoit" title="Computer Programmer at BYU OIT (2020–Present)">BYU OIT</a>,
+				<a href="#cs340" class="expand-on-jump" title="Software Design (2020, BYU)">CS 340</a>,
+				<a href="#cs240" class="expand-on-jump" title="Advanced Programming Concepts (2020, BYU)">CS 240</a>,
+				<a href="#csiph" class="expand-on-jump" title="Computer Science Independent Projects Honors (2015–2016, WHS)">CSIPH</a>,
+				<a href="#apcs" class="expand-on-jump" title="AP Computer Science (2014–2015, WHS)">APCS</a>
+			</li><br>
+			<li>Python (since 2015):
+				<a href="#cs465" class="expand-on-jump" title="Computer Security (2021, BYU)">CS 472</a>,
+				<a href="#cs472" class="expand-on-jump" title="Introduction to Machine Learning (2021, BYU)">CS 472</a>,
+				<a href="#cs312" class="expand-on-jump" title="Algorithm Design & Analysis (2020, BYU)">CS 312</a>,
+				<a href="#csiph" class="expand-on-jump" title="Computer Science Independent Projects Honors (2015–2016, WHS)">CSIPH</a>
+			</li><br>
+			<li>JavaScript (since 2015):
+				<a href="#byuoit" title="Computer Programmer at BYU OIT (2020–Present)">BYU OIT</a>,
+				<a href="#csiph" class="expand-on-jump" title="Computer Science Independent Projects Honors (2015–2016, WHS)">CSIPH</a>
+			</li><br>
+			<li>HTML/CSS (since 2015):
+				<a href="#csiph" class="expand-on-jump" title="Computer Science Independent Projects Honors (2015–2016, WHS)">CSIPH</a>
+			</li><br>
+			<li>SQL (since 2015):
+				<a href="#cs240" class="expand-on-jump" title="Advanced Programming Concepts (2020, BYU)">CS 240</a>,
+				<a href="#csiph" class="expand-on-jump" title="Computer Science Independent Projects Honors (2015–2016, WHS)">CSIPH</a>
+			</li><br>
+			<li>C++ (since 2016):
+				<a href="#cs345" class="expand-on-jump" title="Operating Systems (2020, BYU)">CS 345</a>,
+				<a href="#cs236" class="expand-on-jump" title="Discrete Structures (2019, BYU)">CS 236</a>,
+				<a href="#cs235" class="expand-on-jump" title="Data Structures (2017, BYU)">CS 235</a>,
+				<a href="#cs142" class="expand-on-jump" title="Introduction to Computer Science (2016, BYU)">CS 142</a>
+			</li><br>
+			<li>C (since 2017):
+				<a href="#cs324" class="expand-on-jump" title="Systems Programming (2020, BYU)">CS 224</a>,
+				<a href="#cs224" class="expand-on-jump" title="Computer Systems (2019, BYU)">CS 224</a>,
+				<a href="#it515r" class="expand-on-jump" title="Scientific Computing (2017, BYU)">IT 515R</a>
+			</li><br>
+			<li>R (since 2020):
+				<a title="Statistics for Engineers and Scientists (2020, BYU)">STAT 201</a>
+			</li><br>
+		</div>
+		<br>
+
+		<h2 id="work">Work Experience</h2>
+
+		<div class="about-subsection">
+			<p class="date" id="byuoit">2020 – Present</p>
 			Computer Programmer (BYU Office of Information Technology)<br>
 			<ul>
 				<li>Helped maintain and update university’s Central Authentication Service, a login platform used daily by 30,000+ students and faculty</li><br>
@@ -75,7 +133,7 @@
 		</div>
 		<br>
 
-		<h2 align=left>Relevant Coursework</h2>
+		<h2 id="coursework">Relevant Coursework</h2>
 		<a onClick="if (this.innerHTML == 'Expand All') {
 			$('.toggle-coursework').each(function() {
 				this.checked = true;
@@ -224,7 +282,7 @@
 		</div>
 		<br>
 
-		<h2 align=left>Other Interests</h2>
+		<h2 id="interests">Other Interests</h2>
 		<div class="about-subsection">
 			<ul>
 				<li>Editing</li><br>

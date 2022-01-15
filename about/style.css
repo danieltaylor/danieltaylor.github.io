@@ -19,7 +19,8 @@
 }
 
 input[type='checkbox'] {
-	display: none;
+	visibility: hidden;
+	scroll-margin-top: 20px;
 }
 
 .lbl-toggle::after {
